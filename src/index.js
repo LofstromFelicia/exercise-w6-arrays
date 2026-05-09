@@ -14,14 +14,24 @@ const pokemons = [
   "Pidgey"
 ];
 
+// --- 1 --- 
 const countThem = () => {
+  console.log(`I have ${pokemons.length} pokemons!`)
   // print out, in a sentence, how many pokemons I have.
   // like: "I have x pokemons!"
 };
 
+countThem();
+
+// --- 2 --- 
 const orderThem = () => {
   // order the pokemons alphabetically
+  pokemons.sort();
+
+  console.log(pokemons)
 };
+
+orderThem();
 
 const flipThem = () => {
   // reverse the order of the pokemons
