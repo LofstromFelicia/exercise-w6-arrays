@@ -33,13 +33,26 @@ const orderThem = () => {
 
 orderThem();
 
+// --- 3 --- 
 const flipThem = () => {
   // reverse the order of the pokemons
+  pokemons.reverse();
+
+  console.log(pokemons)
 };
 
+flipThem();
+
+// --- 4 ---
 const makeThemBig = () => {
   // print the pokemons in UPPERCASE letters
+  pokemons.forEach((pokemon) => {
+
+    console.log(pokemon.toUpperCase())
+  });
 };
+
+makeThemBig();
 
 const onlyTheBs = () => {
   // only print the pokemons that starts with B
