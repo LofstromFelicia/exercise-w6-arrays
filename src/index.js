@@ -130,4 +130,15 @@ addInThirdPlace();
 // ***BONUS***
 const theLongestName = () => {
   // find the pokemon with the longest name
+  let longest = ""
+
+  pokemons.forEach((pokemon) => {
+    if (pokemon.length > longest.length) {
+      longest = pokemon
+    }
+  });
+
+  console.log(`${longest} has the longest name!`)
 };
+
+theLongestName(); 
