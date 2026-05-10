@@ -78,24 +78,54 @@ const notTheCs = () => {
 
 notTheCs();
 
+// --- 7 --- 
 const nameAndIdThanks = () => {
   // print out name and index of all pokemons
   // like: number x - Squirtle
+  pokemons.forEach((pokemon, index) => {
+    console.log(`Number ${index + 1} - ${pokemon}`);
+  });
 };
 
+nameAndIdThanks();
+
+// --- 8 ---
 const catchPokemon = name => {
   // add a pokemon with a name of your choice to the list,
   // print the list so you see its there.
+  pokemons.push(name)
+
+  console.log(pokemons)
 };
 
+catchPokemon("Eevee");
+catchPokemon("Snorlax");
+
+// --- 9 --- 
 const didICatchIt = name => {
   // check the pokemons to see if a specific pokemon is in the array
+  const result = pokemons.includes(name)
+
+  if (result) {
+    console.log(`Yes, I have caught ${name}!`)
+  } else {
+    console.log(`No, I haven't found ${name} yet.`)
+  }
 };
 
+didICatchIt("Pikachu");
+didICatchIt("Mewtwo");
+
+// --- 10 --- 
 const addInThirdPlace = () => {
   // add the pokemon "Clefairy" in the third place of the array
   // print the list so you see its there.
+  pokemons.splice(2, 0, "Clefairy")
+
+  console.log(pokemons);
 };
+
+addInThirdPlace();
 
 // ***BONUS***
 const theLongestName = () => {
