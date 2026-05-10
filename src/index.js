@@ -26,7 +26,7 @@ countThem();
 // --- 2 --- 
 const orderThem = () => {
   // order the pokemons alphabetically
-  pokemons.sort();
+  pokemons.sort()
 
   console.log(pokemons)
 };
@@ -36,7 +36,7 @@ orderThem();
 // --- 3 --- 
 const flipThem = () => {
   // reverse the order of the pokemons
-  pokemons.reverse();
+  pokemons.reverse()
 
   console.log(pokemons)
 };
@@ -54,13 +54,29 @@ const makeThemBig = () => {
 
 makeThemBig();
 
+// --- 5 --- 
 const onlyTheBs = () => {
   // only print the pokemons that starts with B
+  const bList = pokemons.filter((pokemon) => {
+    return pokemon.startsWith("B")
+  })
+
+  console.log(bList)
 };
 
+onlyTheBs();
+
+// --- 6 --- 
 const notTheCs = () => {
   // remove all pokemons that starts with C
+  const listWithoutC = pokemons.filter((pokemon) => {
+    return !pokemon.startsWith("C");
+  });
+
+  console.log(listWithoutC);
 };
+
+notTheCs();
 
 const nameAndIdThanks = () => {
   // print out name and index of all pokemons
